@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Profilio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -97,11 +100,22 @@
         font-weight: lighter;
       }
       .about-me {
-        width: 50%;
         color: #ffffff;
       }
       .card-header {
         background-color: #ffff;
+      }
+      /* For smaller screens */
+      @media (max-width: 576px) {
+        .name {
+          font-size: 3em;
+        }
+        .subheader {
+          font-size: 1.5em;
+        }
+        .about-me {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -119,30 +133,33 @@
             >
             <hr />
             <div class="subheader">
-              &#123;&#123; A Computer Science Engineer &#125;&#125;
+              &#123;&#123; A Computer Science Engineer &#125;&#125; e<sup
+                >i<em>θ</em></sup
+              >
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="d-flex justify-content-center z-0 overflow-hidden m-5 row"
-      >
-        <div class="card text-center about-me m-2 col-4">
+      <div class="d-flex justify-content-center z-0 overflow-hidden m-5 row">
+        <div class="card text-center about-me m-2 col-sm-12 col-md-6 col-lg-4">
           <div class="card-body">
             <div class="card-title fs-2">A little rant about me . . .</div>
 
             <p class="card-text fw-light fs-5">
-              This is <strong>Daya</strong>, a geeky front-end developer, equipped with HTML, CSS and Js to craft my ideas.
-              Done a bachelors in CS and started my thousand mile journey in 2022 from Zoho
+              This is <strong>Daya</strong>, a geeky front-end developer,
+              equipped with HTML, CSS and Js to craft my ideas. Done a bachelors
+              in CS and started my thousand mile journey in 2022 from Zoho
             </p>
           </div>
         </div>
-        <div class="card text-center about-me m-2 col-4">
+        <div class="card text-center about-me m-2 col-sm-12 col-md-6 col-lg-4">
           <div class="card-body">
             <div class="card-title fs-2">Zohoite</div>
 
             <p class="card-text fw-light fs-5">
-              Joined as front end developer in 2022 <br> Got to know about <Strong>Ember.js</Strong> <br> Currently squashing bugs and patching some code 
+              Joined as front end developer in 2022 <br />
+              Got to know about <strong>Ember.js</strong> <br />
+              Currently squashing bugs and patching some code
             </p>
           </div>
         </div>
