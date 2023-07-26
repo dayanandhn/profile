@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitLab Merge Request</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            margin: 2% 15%;
+        }
+
+        .status {
+            background-color: rgb(16, 133, 72);
+            width: fit-content;
+            color: white;
+            border-radius: .3em;
+        }
+
+        .developer {
+            width: fit-content;
+            border-radius: 1em;
+            border: 1px solid #dbdbdb;
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .active {
+            border-bottom: 3px solid #666;
+            font-weight: bold;
+        }
+
+        .nav-header {
+            border-bottom: 1px solid #dbdbdb;
+        }
+
+        .nav-item:hover {
+            border-bottom: 3px solid #666;
+        }
+
+        .about {
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+        .linked-img {
+            width: 2em;
+            height: 2em;
+        }
+
+        .linked-img:hover {
+            background-color: #f0f0f0;
+            border-color: #e3e3e3;
+            color: #303030;
+        }
+
+        .vline {
+            border-right: 1px solid #dbdbdb;
+            height: 1.1em;
+            position: relative;
+            top: -2.35em;
+        }
+
+        .deployed {
+            background-color: #f0f0f0;
+        }
+
+        .btn {
+            border-radius: .2em;
+        }
+
+        .text-blue {
+            color: #1e75cb;
+        }
+
+        .emoji-btn:hover {
+            background: none;
+            border: 1px solid #666;
+            box-shadow: inset 0px 0px 2px 1px #0000004d;
+        }
+
+        #mail-content {
+            border: none;
+            resize: none;
+            outline: none;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="wrapper">
+        <header>
+            <div class="py-2">
+                <span class="status px-1 mr-2 fw-light">Zoho</span>
+                <span class="mr-2">Joined 1 year ago</span>
+                <span class="developer px-2 fw-light">Developer</span>
+            </div>
+            <div class="py-2">
+                <h2>[FRONT END ENGINEER] Dayanandh</h2>
+            </div>
+            <div class="mt-2 py-2 nav-header">
+                <span class="pr-4 py-2 active nav-item"><a href="">Overview</a></span>
+                <span class="p-2 nav-item"><a href="">Skillset</a></span>
+            </div>
+        </header>
+        <section>
+            <div class="about p-3 mt-3 d-flex align-items-center">
+                <span class="mr-3">
+                    <img src="about.svg" alt="about">
+                </span>
+                <div class="mx-2">
+                    <p class="m-0">This is <strong>Daya</strong>, a geeky front-end developer, equipped with <em>HTML, CSS and Js</em> to craft my
+                        ideas. Done a bachelors in CS and started my thousand mile journey in 2022 from Zoho</p>
+                </div>
+                <a href="https://www.linkedin.com/in/dayanandhn" target="_blank">
+                    <img src="linkedin.svg" alt="" srcset="" class="linked-img">
+                </a>
+            </div>
+
+            <div class="about pt-3 mt-3 d-flex flex-column">
+                <div class="d-flex align-items-center px-3">
+                    <span class="vline"></span>
+                    <span class="mr-3">
+                        <img src="work.svg" alt="about">
+                    </span>
+                    <div class="mx-2">
+                        <p class="m-0">Zoho Corp. (2022 - current)</p>
+                    </div>
+                </div>
+                <div class="mt-3 p-3 deployed">
+                    <span class="img"></span>
+                    <span style="padding-left: 2em;">deployed to <span class="text-blue">Finance Plus
+                            Suite</span></span>
+                </div>
+            </div>
+
+            <div class="about pt-3 mt-3 d-flex flex-column">
+                <div class="d-flex align-items-center px-3">
+                    <span class="vline"></span>
+                    <span class="mr-3">
+                        <img src="university.svg" alt="about">
+                    </span>
+                    <div class="mx-2">
+                        <p class="m-0">Government College of Technology (2018 - 2022)</p>
+                    </div>
+                </div>
+                <div class="mt-3 p-3 deployed">
+                    <span class="img"></span>
+                    <span style="padding-left: 2em;">
+                        <span class="mr-3">
+                            <img src="tick-circle.svg" alt="about">
+                        </span>
+                        Completed in <span class="text-blue">2022</span></span>
+                </div>
+            </div>
+
+            <div class="my-2">
+                <button class="btn btn-outline-secondary py-0 emoji-btn">
+                    &#128077;
+                </button>
+
+                <button class="btn btn-outline-secondary py-0 emoji-btn">
+                    &#128078;
+                </button>
+            </div>
+
+            <hr>
+            <div class="about mail-me d-flex flex-column px-4">
+                <div class="mt-2 py-2 nav-header">
+                    <span class="pr-4 py-2 active nav-item"><a href="">Write to me</a></span>
+                    <span class="p-2 nav-item"><a href="">Preview</a></span>
+                </div>
+                <div class="">
+                    <textarea class="pt-2" name="content" id="mail-content" rows="10" placeholder="Catch me up . . ."></textarea>
+                </div>
+                
+            </div>
+            <button class="btn btn-outline-secondary py-0 my-2">
+                Mail me
+            </button>
+        </section>
+    </main>
+</body>
+
+</html>
