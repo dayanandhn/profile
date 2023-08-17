@@ -1,175 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Profilio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
-    <style>
-      .profile-content {
-        background: linear-gradient(to bottom right, #007bff, #ff5733, #007bff);
-      }
-      .card {
-        background: linear-gradient(
-          to bottom right,
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Profilio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <style>
+    .profile-content {
+      background: linear-gradient(to bottom right, #007bff, #ff5733, #007bff);
+    }
+
+    .card {
+      background: linear-gradient(to bottom right,
           #00f6a3,
-          #0099f0
-        ); /* Change the colors as desired */
-        border-radius: 10px;
-        font-size: 1.2em;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+          #0099f0);
+      /* Change the colors as desired */
+      border-radius: 10px;
+      font-size: 1.2em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-      .header {
-        font-size: 1em;
-        backdrop-filter: blur(10px);
-        display: flex;
-        width: 40vw;
-        box-shadow: 0 0 13px 9px rgba(0, 0, 0, 0.2);
-      }
-      .gradient-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to top right,
+    .header {
+      font-size: 1em;
+      backdrop-filter: blur(10px);
+      display: flex;
+      width: 40vw;
+      box-shadow: 0 0 13px 9px rgba(0, 0, 0, 0.2);
+    }
+
+    .gradient-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top right,
           #007bff,
-          #ff5733
-        ); /* Set your desired gradient colors */
-        opacity: 0.8; /* Adjust the opacity as desired */
-      }
-      .empty-box {
-        height: 100vh;
+          #ff5733);
+      /* Set your desired gradient colors */
+      opacity: 0.8;
+      /* Adjust the opacity as desired */
+    }
+
+    .typewriter {
+      /* display: inline-block; */
+      overflow: hidden;
+      /* Hide the overflow to create the typewriter effect */
+      border-right: 2px solid #ffffff;
+      /* Add a blinking cursor effect using a border */
+      padding-right: 4px;
+      width: 100%;
+      /* Control the typing speed and steps */
+      border-radius: 20px;
+      background-color: #ffff;
+    }
+
+    .header-kural {
+      /* display: inline-block; */
+      overflow: hidden;
+      width: 100%;
+      background-color: #ffff;
+      position: sticky;
+      top: 0px;
+      box-shadow: 0 0 13px 9px rgba(0, 0, 0, 0.2);
+
+      word-spacing: 0.3em;
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0%;
+        /* Start with zero width */
       }
 
-      .typewriter {
-        /* display: inline-block; */
-        overflow: hidden; /* Hide the overflow to create the typewriter effect */
-        border-right: 2px solid #ffffff; /* Add a blinking cursor effect using a border */
-        padding-right: 4px; /* Add some space for the cursor effect */
-        animation: typewriter 2s forwards; /* Control the typing speed and steps */
-        border-radius: 20px;
-        background-color: #ffff;
+      to {
+        width: 100%;
       }
+    }
 
-      @keyframes typewriter {
-        from {
-          width: 0; /* Start with zero width */
-        }
-        to {
-          width: 100%; /* Fully display the name at the end */
-          border-right: 0px;
-        }
-      }
-      .gradient-text {
-        background-image: linear-gradient(45deg, #ff5500, #00aaff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
+    .gradient-text {
+      background-image: linear-gradient(45deg, #ff5500, #00aaff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .name {
+      display: inline-block;
+      white-space: nowrap;
+      /* Prevent line breaks within the name */
+
+      font-size: 2.5em;
+      font-weight: bolder;
+      word-spacing: 0.3em;
+    }
+
+    body {
+      border: 15px solid white;
+      border-radius: 10px;
+    }
+
+    .subheader {
+      font-size: 2em;
+      font-weight: lighter;
+    }
+
+    .about-me {
+      color: #ffffff;
+    }
+
+    .card-header {
+      background-color: #ffff;
+    }
+
+    /* For smaller screens */
+    @media (max-width: 768px) {
       .name {
-        display: inline-block;
-        white-space: nowrap; /* Prevent line breaks within the name */
+        font-size: 0.6em;
+      }
 
-        font-size: 5em;
-        font-weight: bolder;
-      }
-      .linkedin {
-        width: 50%;
-        height: 50%;
-      }
-      .social-media-icon {
-        width: 30%;
-      }
-      body {
-        border: 15px solid white;
-        border-radius: 10px;
-      }
       .subheader {
-        font-size: 2em;
-        font-weight: lighter;
+        font-size: 1em;
       }
+
       .about-me {
-        color: #ffffff;
+        width: 100%;
       }
-      .card-header {
-        background-color: #ffff;
-      }
-      /* For smaller screens */
-      @media (max-width: 576px) {
-        .name {
-          font-size: 2.5em;
-        }
-        .subheader {
-          font-size: 1em;
-        }
-        .about-me {
-          width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div
-      class="d-flex align-items-center justify-content-center flex-column profile-content"
-    >
-      <div
-        class="empty-box d-flex align-items-center justify-content-center flex-column"
-      >
-        <div class="typewriter d-flex align-items-center p-2">
-          <div class="text-center">
-            <span class="name gradient-text"
-              >&lt;<span>DAYANANDH </span>&#47;&gt;</span
-            >
-            <hr />
-            <div class="subheader">
-              &#123;&#123; A Computer Science Engineer &#125;&#125; e<sup
-                >i<em>θ</em></sup
-              >
-            </div>
-          </div>
-        </div>
+    }
+  </style>
+</head>
+
+<body>
+  <div class="d-flex align-items-center justify-content-center flex-column profile-content">
+    <div class="header-kural d-flex align-items-center p-3 justify-content-center">
+      <span class="name gradient-text">
+        40.&nbsp;
+      </span>
+      <span class="name gradient-text">
+        கல்வி
+      </span>
+    </div>
+    <div class="empty-box d-flex align-items-center justify-content-center flex-column">
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          கற்கக் கசடறக் கற்பவை கற்றபின் <br>
+          நிற்க அதற்குத் தக
+        </span>
       </div>
-      <div class="d-flex justify-content-center z-0 overflow-hidden m-5 row">
-        <div class="card text-center about-me m-2 col-sm-12 col-md-6 col-lg-4">
-          <div class="card-body">
-            <div class="card-title fs-2">A little rant about me . . .</div>
-
-            <p class="card-text fw-light fs-5">
-              This is <strong>Daya</strong>, a geeky front-end developer,
-              equipped with HTML, CSS and Js to craft my ideas. Done a bachelors
-              in CS and started my thousand mile journey in 2022 from Zoho
-            </p>
-          </div>
-        </div>
-        <div class="card text-center about-me m-2 col-sm-12 col-md-6 col-lg-4">
-          <div class="card-body">
-            <div class="card-title fs-2">Zohoite</div>
-
-            <p class="card-text fw-light fs-5">
-              Joined as front end developer in 2022 <br />
-              Got to know about <strong>Ember.js</strong> <br />
-              Currently squashing bugs and patching some code
-            </p>
-          </div>
-        </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          எண்என்ப ஏனை எழுத்தென்ப இவ்விரண்டும் <br>
+          கண்என்ப வாழும் உயிர்க்கு
+        </span>
+      </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          கண்ணுடைய ரென்பவர் கற்றோர் முகத்திரண்டு <br>
+          புண்ணுடையர் கல்லா தவர்
+        </span>
+      </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          உவப்பத் தலைக்கூடி உள்ளப் பிரிதல் <br>
+          அனைத்தே புலவர் தொழில்
+        </span>
+      </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          உடையார்முன் இல்லார்போல் ஏக்கற்றுங் கற்றார் <br>
+          கடையரே கல்லா தவர்
+        </span>
+      </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          தொட்டனைத் தூறு மணற்கேணி மாந்தர்க்குக் <br>
+          கற்றனைத் தூறும் அறிவு
+        </span>
+      </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          யாதானும் நாடாமால் ஊராமால் என்னொருவன் <br>
+          சாந்துணையுங் கல்லாத வாறு
+        </span>
+      </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          ஒருமைக்கண் தான்னற்ற கல்வி ஒருவற் <br>
+          கெழுமையும் ஏமாப் புடைத்து
+        </span>
+      </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          தாமின் புறுவ துலகின் புறக்கண்டு <br>
+          காமுறுவர் கற்றறிந் தார்
+        </span>
+      </div>
+      <div class="typewriter d-flex align-items-center p-3 m-2">
+        <span class="name gradient-text">
+          கேடில் விழுச் செல்வங் கல்வி யொருவற்கு <br>
+          மாடல்ல மற்றை யவை
       </div>
     </div>
+  </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
